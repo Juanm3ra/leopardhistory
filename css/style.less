@@ -1,0 +1,170 @@
+/*
+CHANGES DONE:
+*/
+
+/*
+File Name: style.less
+Date: 9/4/2018
+Programmer: Juan Mera
+*/
+
+/* MOBILE STYLESHEET */
+
+@import 'palette.less';
+@import 'mixins.less';
+
+    body {
+        background-color: @color4;
+        }
+    main, header, footer, nav {
+        padding: 1em;
+        }
+    header {
+        background-color: @color2;
+        height:auto;
+        text-align: center;
+        font-size: 30px;
+        border-bottom: 4px double black;
+        }
+    #features {
+        padding: 10px;
+        }
+    main li {
+        padding: 5px;
+        }
+    p {
+        font-size: 15px;
+        }
+    .wherepic1 {
+            height: auto;
+            width: auto;
+            padding: 10px;
+        }
+    .wherepic5 {
+            float: left;
+            height: 300px;
+            width: 450px;
+            padding: 10px;
+        }
+    .wherepic4 {
+        padding-top: 20px;
+    }
+    .wherepic6 {
+            float: right;
+            height: 300px;
+            width: 450px;
+            padding: 10px;
+        }
+    nav a {
+        text-decoration: none;
+        color: @lightColor;
+        &:hover {
+           .expand;        
+        }
+        &:visited {
+            color: @color2;
+        }
+    }
+    nav li {
+        .upperAndbold;
+        padding: 7px;
+        }
+    nav {
+        background-color: @color1;
+        text-align: center;
+        border-bottom: 4px double black;
+        }
+    footer {
+        height: auto;
+        .addgradientAsback(to bottom right, #ffff, #F23078);
+        color: #ffff;
+        font-size: 20px;
+        padding: 10px;
+        }
+    footer a {
+        .underAnditali();
+        .footerLinks();
+    }
+    footer ul{
+        .footerLinks();
+    }
+/* STYLING FOR TABLET IN PORTRAIT */
+@media only screen and (min-width: 481px) {
+    body {
+        font-size: 20px;
+        line-height: 1.5em;
+        padding: 2em;
+    }
+    nav {
+        .alwaystopNav();
+    }
+    nav li {
+        display: inline;
+        padding: 10px;
+    }
+    .pic1 { 
+        height: 300px;
+        width: 450px;
+        float: left;
+        padding: 20px;
+    }
+    .pic2 {
+        height: 300px;
+        width: 450px;
+        float: right;
+        padding: 20px;
+    }
+    .mainimg{
+        padding: 10px;
+        border-bottom: 5px double black;
+    }
+    .wherepic1 {
+        padding: 5px;
+    }
+    .wherepic5 {
+        float: left;
+        height: 300px;
+        width: 450px;
+        padding: 10px;
+    }
+    .wherepic6 {
+        float: right;
+        height: 300px;
+        width: 450px;
+        padding: 10px;
+    }
+    .wherepic4 {
+        padding: 10px;
+    }
+    .section2 {
+        padding: 15px;
+    }
+    footer {
+        clear: both;
+    }
+}
+
+/*
+DESKTOP STYLESHEET
+The following CSS affects all screen sizes larger than 1024 pixels wide.
+*/
+@media only screen and (min-width: 1025px){
+    body {
+        font-size: 20px;
+        line-height: 1.5em;
+    }
+    nav {
+        .alwaystopNav();
+    }
+    .wherepic1{
+        height: 500px;
+        width: 800px;
+        float: right;
+    }
+    .section2 {
+        float: left;
+    }
+    footer{
+        clear: both;
+    }
+}

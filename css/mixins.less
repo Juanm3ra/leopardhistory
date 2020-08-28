@@ -1,0 +1,71 @@
+// out: null
+
+/* Parametric mixin for headings */
+.headingStyle(@paramColor: @color3; @paramSize: 1.0em) {
+    color: @paramColor; // this accepts a font color passed through as an argument
+    font-size: @paramSize; // this accepts a font size passed through as an argument
+    font-weight: bold; // this is static code... not everything has to be dynamic!
+    line-height: @paramSize; // this reuses the same font size as before to change line height
+    margin-top: @paramSize /2;
+    margin-bottom: @paramSize / 2;
+    text-transform: uppercase;
+}
+.rndcornersBckcolor(@paramRadius: 5px; @paramBackcolor: @color3) {
+    -moz-border-radius: 4px; 
+    -webkit-border-radius: 4px; 
+    border-radius: @paramRadius;
+    background-color: @paramBackcolor;
+}
+.addDropshadow(@paramX: 6px; @paramY: 5px; @paramBlur: 8px; @paramShadowcolor: @lightColor2) {
+    box-shadow: @paramX @paramY @paramBlur @paramShadowcolor;
+}
+.addgradientAsback(@paramDirect: to left; #CCC; #AAA) {
+    background: linear-gradient(@paramDirect, @paramFirstcol, @paramSecondcol);
+}
+
+/* End parametric mixin for headings */
+.expand() {
+    transform: scale(1.1);
+    display: inline-block;
+}
+.transparent() { 
+    opacity: 0.5;
+}
+.underAnditali() { 
+    text-decoration: underline;
+    font-style: italic;
+}
+.upperAndbold() { 
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.footerLinks() {
+    color: #FCFFF5;
+    text-align: center;
+}
+.imgFlip() { 
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}
+.transAndbright() { 
+        opacity: 0.5;
+        &:hover {
+            opacity: 1.0;
+        }
+}
+.alwaystopNav() { 
+        position: sticky;
+        top: 0;
+}
+.changeBullet() { 
+    list-style-type:square;
+}
+.pUnderline() { 
+    &:hover{
+        text-decoration: underline;
+    }
+}
